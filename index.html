@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>If My iPhone Is Stolen: a simple Shortcut, step by step</title>
+<meta name="description" content="A simple Shortcut automation, written for VoiceOver: someone you trust texts your iPhone a secret word, and it texts them back where it is. No Face ID needed.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:title" content="If My iPhone Is Stolen: a simple Shortcut">
+<meta property="og:description" content="Someone you trust texts your iPhone a secret word, and it texts them back where it is. Six short steps, written for VoiceOver. No Face ID needed.">
+<meta property="og:url" content="https://2three1y.github.io/stolenphoneshortcut/">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header>
+  <p class="kicker">iPhone Shortcut, written for VoiceOver</p>
+</header>
+<main id="main">
+<h1>If my iPhone is stolen</h1>
+<p class="lead">Someone you trust texts your iPhone a secret word. Your iPhone texts them back where it is, all by itself. No Face ID needed.</p>
+<p>Idea from All By Allan: <a href="https://www.tiktok.com/@all.by.allan/video/7702242061294062861">watch his original TikTok</a>. This page is the simplest version of it.</p>
+
+<nav aria-label="On this page">
+  <h2>On this page</h2>
+  <ul>
+    <li><a href="#before">Before you start</a></li>
+    <li><a href="#steps">The 6 steps</a></li>
+    <li><a href="#words">Secret word ideas</a></li>
+    <li><a href="#findmy">Also turn on Find My</a></li>
+    <li><a href="#limits">Honest limits</a></li>
+    <li><a href="#extras">Extras (optional)</a></li>
+  </ul>
+</nav>
+
+<section id="before" aria-labelledby="before-h">
+<h2 id="before-h">Before you start</h2>
+<ul>
+  <li>Pick one person you trust completely, like a parent. They need to be in your Contacts.</li>
+  <li>Pick a secret word. Make one up, so it never shows up in normal texts. Do not use the word “location”.</li>
+  <li>Tell that person the word privately, in person or on a call.</li>
+  <li>Open the Shortcuts app. It comes with every iPhone. If it's missing, get it free from the App Store.</li>
+</ul>
+<p class="note">Button names below are what VoiceOver reads on recent iOS versions. Apple renames things now and then, so if a name is a little different, look for the closest match.</p>
+</section>
+
+<section id="steps" aria-labelledby="steps-h">
+<h2 id="steps-h">The 6 steps</h2>
+<ol class="steps" role="list">
+  <li>
+    <h3>Start a new automation</h3>
+    <ol>
+      <li>In Shortcuts, double-tap the <strong>Automation</strong> tab at the bottom.</li>
+      <li>Double-tap <strong>New Automation</strong>. If you already have automations, it's the <strong>Add</strong> button (the plus) at the top right.</li>
+      <li>Swipe right until you hear <strong>Message</strong>, then double-tap it. It's in the Communication group. You can also type Message in the search field at the top.</li>
+    </ol>
+  </li>
+  <li>
+    <h3>Choose who and the secret word</h3>
+    <ol>
+      <li>Next to <strong>Sender</strong>, double-tap <strong>Choose</strong>. Type your trusted person's name, double-tap them, then double-tap <strong>Done</strong>.</li>
+      <li>Next to <strong>Message Contains</strong>, double-tap <strong>Choose</strong>. Type your secret word, then double-tap <strong>Done</strong>.</li>
+    </ol>
+  </li>
+  <li>
+    <h3>Make it run by itself</h3>
+    <ol>
+      <li>Double-tap <strong>Run Immediately</strong>. Not “Run After Confirmation”, which would wait for you to tap.</li>
+      <li>If you hear <strong>Notify When Run</strong>, turn it off, so a thief doesn't see a pop-up.</li>
+      <li>Double-tap <strong>Next</strong> at the top right.</li>
+      <li>Double-tap <strong>New Blank Automation</strong>. On some iOS versions it's called <strong>Create New Shortcut</strong>.</li>
+    </ol>
+  </li>
+  <li>
+    <h3>Add “Get Current Location”</h3>
+    <ol>
+      <li>Find the search field. It's at the bottom of the screen, labeled something like <strong>Search for apps and actions</strong>. If you hear <strong>Add Action</strong> first, double-tap that.</li>
+      <li>Type <strong>Get Current Location</strong>.</li>
+      <li>Double-tap the result with that exact name.</li>
+    </ol>
+  </li>
+  <li>
+    <h3>Add “Send Message”</h3>
+    <ol>
+      <li>Use the search field again. Type <strong>Send Message</strong>, then double-tap the result.</li>
+      <li>The action reads like “Send Current Location to Recipients”. If it says <strong>Message</strong> instead of Current Location, double-tap <strong>Message</strong> and choose <strong>Current Location</strong>.</li>
+      <li>Double-tap <strong>Recipients</strong>. Type the same trusted person's name and double-tap them.</li>
+      <li>If you hear <strong>Show More</strong> on this action, double-tap it and turn off <strong>Show Compose Sheet</strong> (or Show When Run), so the text sends without anyone tapping Send.</li>
+      <li>Double-tap <strong>Done</strong> at the top right. That's it, it's saved.</li>
+    </ol>
+  </li>
+  <li>
+    <h3>Test it</h3>
+    <ol>
+      <li>Ask your trusted person to text you the secret word.</li>
+      <li>Within a few seconds, they should get a text back from your phone with your location.</li>
+      <li>If nothing comes, open the automation and check the sender, the word's spelling, and that Run Immediately is on.</li>
+    </ol>
+  </li>
+</ol>
+</section>
+
+<section id="words" aria-labelledby="words-h">
+<h2 id="words-h">Secret word ideas</h2>
+<p>Made-up words work best, because nobody types them by accident. Pick one, or invent your own:</p>
+<ul class="words">
+  <li>zorbleflap</li>
+  <li>pickletornado</li>
+  <li>toastermoon</li>
+  <li>quokkasaurus</li>
+  <li>wobblecrumpet</li>
+  <li>kazoocomet</li>
+</ul>
+<p>Avoid real words like “location”, “where”, “phone” or “help”. They come up in normal texts, and the automation would send your location each time.</p>
+</section>
+
+<section id="findmy" aria-labelledby="findmy-h">
+<h2 id="findmy-h">Also turn on Find My</h2>
+<p>This Shortcut adds to Find My. It doesn't replace it. Turn Find My on too:</p>
+<ol>
+  <li>Open <strong>Settings</strong>.</li>
+  <li>Double-tap your name at the top.</li>
+  <li>Double-tap <strong>Find My</strong>, then <strong>Find My iPhone</strong>.</li>
+  <li>Turn on <strong>Find My iPhone</strong>.</li>
+  <li>Turn on <strong>Find My network</strong>, which can find it even when it's offline.</li>
+  <li>Turn on <strong>Send Last Location</strong>, which sends its spot when the battery is almost dead.</li>
+</ol>
+<p>Apple's Stolen Device Protection needs Face ID or Touch ID, so it may not be an option for you. This Shortcut plus Find My is a good alternative.</p>
+</section>
+
+<section id="limits" aria-labelledby="limits-h">
+<h2 id="limits-h">Honest limits</h2>
+<ul>
+  <li><strong>Airplane Mode or powering off stops it.</strong> The phone needs signal to get the text and reply.</li>
+  <li><strong>It's only as private as your word.</strong> Your trusted person can get your location any time they text it. Pick someone you fully trust, and a word that never comes up in normal texts.</li>
+  <li><strong>Keep the word secret.</strong> Share it only privately with that one person.</li>
+  <li><strong>Location may be rough indoors.</strong> It's usually close, but not always exact.</li>
+  <li><strong>Stolen phone?</strong> Don't chase anyone. Give the location to a parent or the police.</li>
+</ul>
+</section>
+
+<section id="extras" aria-labelledby="extras-h">
+<h2 id="extras-h">Extras (optional)</h2>
+<p>These add more, but they're fiddlier with VoiceOver. The 6 steps above already work on their own.</p>
+
+<details>
+<summary>Send a Google Maps link instead</summary>
+<p>This is what the original video does. Add these before Send Message, then change Send Message to send the Text.</p>
+<ol>
+  <li>After Get Current Location, search for the <strong>Text</strong> action and add it.</li>
+  <li>In the text box, type <code>https://www.google.com/maps?q=</code></li>
+  <li>Insert the <strong>Current Location</strong> variable right after the equals sign. It's in the bar above the keyboard, or under <strong>Select Variable</strong>.</li>
+  <li>Double-tap that inserted variable and choose <strong>Latitude</strong>.</li>
+  <li>Type a comma, with no spaces.</li>
+  <li>Insert <strong>Current Location</strong> again, double-tap it, and choose <strong>Longitude</strong>.</li>
+  <li>In Send Message, double-tap the message part and choose <strong>Text</strong>.</li>
+</ol>
+<p>The finished text looks like: https://www.google.com/maps?q=LATITUDE,LONGITUDE, with your real numbers in place of the capital words.</p>
+</details>
+
+<details>
+<summary>Send photos from both cameras</summary>
+<ol>
+  <li>At the end of the automation, search for <strong>Take Photo</strong> and add it.</li>
+  <li>Set the camera to <strong>Back</strong>. Double-tap <strong>Show More</strong> and turn off <strong>Show Camera Preview</strong>.</li>
+  <li>Add another <strong>Send Message</strong>. Set the message to <strong>Photo</strong> and the recipient to your trusted person.</li>
+  <li>Do steps 1 to 3 again with the camera set to <strong>Front</strong>.</li>
+  <li>Double-tap <strong>Done</strong>.</li>
+</ol>
+<p>Heads up: iPhones often block the camera while locked, so photos may not send from a locked phone. The location text still works either way.</p>
+</details>
+</section>
+</main>
+<footer>
+  <p>Idea from <a href="https://www.tiktok.com/@all.by.allan/video/7702242061294062861">All By Allan</a>.</p>
+  <p>Co-written with Tab. <a href="https://github.com/2three1y/stolenphoneshortcut">Source on GitHub</a> (MIT).</p>
+</footer>
+</body>
+</html>
