@@ -1,0 +1,28 @@
+:root{--bg:#fdfcf8;--fg:#141414;--muted:#3d3d3d;--card:#ffffff;--line:#cfcac0;--accent:#0b57d0;--focus:#c2410c;--note:#fff4d6}
+@media (prefers-color-scheme: dark){:root{--bg:#111315;--fg:#f2f2f2;--muted:#c9c9c9;--card:#1b1e21;--line:#3a3f45;--accent:#8ab4ff;--focus:#ffb347;--note:#2a2617}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:1.25rem/1.6 -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;overflow-wrap:break-word}
+header,main,footer{max-width:42rem;margin:0 auto;padding:0 1.25rem}
+header{padding-top:1.5rem}
+.kicker{margin:0;font-weight:600;color:var(--muted);font-size:1.05rem}
+h1{font-size:2.4rem;line-height:1.15;margin:.4rem 0 1rem}
+h2{font-size:1.7rem;line-height:1.25;margin:2.5rem 0 .75rem;padding-top:1rem;border-top:2px solid var(--line)}
+nav h2{border-top:0;margin-top:1.5rem}
+h3{font-size:1.35rem;margin:0 0 .5rem}
+.lead{font-size:1.4rem}
+a{color:var(--accent);text-underline-offset:.2em}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:1rem;top:-4rem;background:var(--fg);color:var(--bg);padding:.6rem 1rem;border-radius:6px;z-index:10}
+.skip:focus{top:1rem}
+.note{background:var(--note);border-left:5px solid var(--focus);padding:.8rem 1rem;border-radius:6px}
+ol,ul{padding-left:1.6rem}
+li{margin:.35rem 0}
+ol.steps{padding-left:0;list-style:none;counter-reset:step}
+ol.steps>li{counter-increment:step;background:var(--card);border:2px solid var(--line);border-radius:12px;padding:1rem 1.1rem;margin:1rem 0}
+ol.steps>li>h3::before{content:"Step " counter(step) ": "}
+.words li{font-weight:600;font-size:1.3rem}
+code{font-size:1rem;background:var(--card);border:1px solid var(--line);padding:.1rem .3rem;border-radius:4px;word-break:break-all}
+details{background:var(--card);border:2px solid var(--line);border-radius:12px;padding:.8rem 1.1rem;margin:1rem 0}
+summary{cursor:pointer;font-weight:700;font-size:1.3rem;padding:.4rem 0}
+footer{margin-top:3rem;padding-bottom:3rem;border-top:2px solid var(--line);color:var(--muted)}
