@@ -26,3 +26,15 @@ code{font-size:1rem;background:var(--card);border:1px solid var(--line);padding:
 details{background:var(--card);border:2px solid var(--line);border-radius:12px;padding:.8rem 1.1rem;margin:1rem 0}
 summary{cursor:pointer;font-weight:700;font-size:1.3rem;padding:.4rem 0}
 footer{margin-top:3rem;padding-bottom:3rem;border-top:2px solid var(--line);color:var(--muted)}
+h4{font-size:1.25rem;margin:1.2rem 0 .5rem}
+ol.steps>li>h4{margin-top:0}
+ol.steps>li>h3::before,ol.steps>li>h4::before{content:"Step " counter(step) ": "}
+.shortcut>section>h3,.shortcut section h3{font-size:1.45rem;margin:2rem 0 .6rem}
+.fields{display:grid;gap:.35rem;margin:1rem 0}
+.fields label{font-weight:600;margin-top:.5rem}
+input{font:inherit;color:var(--fg);background:var(--card);border:2px solid var(--line);border-radius:8px;padding:.55rem .7rem;width:100%;max-width:26rem}
+button.copy{font:inherit;font-weight:700;color:#fff;background:#0b57d0;border:0;border-radius:10px;padding:.75rem 1.2rem;min-height:44px;cursor:pointer}
+@media (prefers-color-scheme: dark){button.copy{color:#111315;background:#8ab4ff}}
+input:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.status{min-height:1.6em;font-weight:700;margin:.2rem 0 1rem}
+.prompt{white-space:pre-wrap;background:var(--card);border:2px solid var(--line);border-left:6px solid var(--accent);border-radius:12px;padding:1rem 1.1rem;margin:.5rem 0 1rem}
