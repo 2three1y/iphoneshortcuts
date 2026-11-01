@@ -3,40 +3,76 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>If My iPhone Is Stolen: a simple Shortcut, step by step</title>
-<meta name="description" content="A simple Shortcut automation, written for VoiceOver: someone you trust texts your iPhone a secret word, and it texts them back where it is. No Face ID needed.">
+<title>iPhone Shortcuts: written for VoiceOver, with iOS 27 prompts</title>
+<meta name="description" content="A growing collection of iPhone Shortcuts and automations, written for VoiceOver. Each one has a prompt you can copy for iOS 27, plus steps to build it by hand.">
 <meta name="color-scheme" content="light dark">
 <meta property="og:type" content="website">
-<meta property="og:title" content="If My iPhone Is Stolen: a simple Shortcut">
-<meta property="og:description" content="Someone you trust texts your iPhone a secret word, and it texts them back where it is. Six short steps, written for VoiceOver. No Face ID needed.">
-<meta property="og:url" content="https://2three1y.github.io/stolenphoneshortcut/">
+<meta property="og:title" content="iPhone Shortcuts">
+<meta property="og:description" content="A growing collection of iPhone Shortcuts, written for VoiceOver. Copy a prompt, paste it into Shortcuts on iOS 27, done.">
+<meta property="og:url" content="https://2three1y.github.io/iphoneshortcuts/">
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
 <header>
-  <p class="kicker">iPhone Shortcut, written for VoiceOver</p>
+  <p class="kicker">A collection, written for VoiceOver</p>
 </header>
 <main id="main">
-<h1>If my iPhone is stolen</h1>
-<p class="lead">Someone you trust texts your iPhone a secret word. Your iPhone texts them back where it is, all by itself. No Face ID needed.</p>
-<p>Idea from All By Allan: <a href="https://www.tiktok.com/@all.by.allan/video/7702242061294062861">watch his original TikTok</a>. This page is the simplest version of it.</p>
+<h1>iPhone Shortcuts</h1>
+<p class="lead">Handy iPhone Shortcuts and automations. Each one has a prompt you can copy and paste into Shortcuts on iOS 27, plus steps to build it by hand.</p>
 
 <nav aria-label="On this page">
   <h2>On this page</h2>
   <ul>
-    <li><a href="#before">Before you start</a></li>
-    <li><a href="#steps">The 6 steps</a></li>
-    <li><a href="#words">Secret word ideas</a></li>
-    <li><a href="#findmy">Also turn on Find My</a></li>
-    <li><a href="#limits">Honest limits</a></li>
-    <li><a href="#extras">Extras (optional)</a></li>
+    <li><a href="#howto">How the iOS 27 prompts work</a></li>
+    <li><a href="#stolen">Shortcut 1: If my iPhone is stolen</a></li>
+    <li><a href="#airplane">Shortcut 2: Stop thieves turning on Airplane Mode</a></li>
   </ul>
 </nav>
 
+<section id="howto" aria-labelledby="howto-h">
+<h2 id="howto-h">How the iOS 27 prompts work</h2>
+<p>iOS 27 added <strong>Describe a Shortcut</strong> to the Shortcuts app. You type or dictate what you want, and Apple Intelligence builds the shortcut, automation included. It needs Apple Intelligence turned on, which works on iPhone 15 Pro, all iPhone 16 models, and newer.</p>
+<ol>
+  <li>On this page, fill in the boxes above a prompt if it has any. Then double-tap its <strong>Copy</strong> button. You'll hear “Copied”.</li>
+  <li>Open <strong>Shortcuts</strong> and double-tap <strong>Add</strong> (the plus) at the bottom.</li>
+  <li>A box asks what you want your shortcut to do. Double-tap and hold in the box, then double-tap <strong>Paste</strong>.</li>
+  <li>Double-tap the button next to the box to create it. Shortcuts builds it and reads you a short summary of what it made.</li>
+  <li>Check it can run by itself: double-tap <strong>Edit</strong>, then the <strong>Info</strong> button (an i in a circle), then <strong>Privacy</strong>, and turn on <strong>Allow Running When Locked</strong>.</li>
+  <li>Test it, using the test steps in that shortcut's section.</li>
+</ol>
+<p class="note">If the plus opens a blank editor instead of the box, go to <strong>Settings</strong>, then <strong>Apps</strong>, then <strong>Shortcuts</strong>, and switch it away from <strong>Editor</strong>. AI can get a detail wrong, so always test. The by-hand steps are there if it does.</p>
+<p>Sources: <a href="https://support.apple.com/en-us/149045">Apple: New in iOS 27 Shortcuts</a>, <a href="https://support.apple.com/guide/shortcuts/add-automations-apdfbdbd7123/ios">Apple: Add automations to Shortcuts</a>, <a href="https://www.cnet.com/tech/services-and-software/if-youre-not-using-your-iphone-shortcuts-you-should-ios-27-makes-it-much-easier/">CNET: the Describe a Shortcut feature</a>.</p>
+</section>
+
+<section id="stolen" class="shortcut" aria-labelledby="stolen-h">
+<h2 id="stolen-h">Shortcut 1: If my iPhone is stolen</h2>
+<p class="lead">Someone you trust texts your iPhone a secret word. Your iPhone texts them back where it is, all by itself. No Face ID needed.</p>
+<p>Idea from All By Allan: <a href="https://www.tiktok.com/@all.by.allan/video/7702242061294062861">watch his original TikTok</a>. This is the simplest version of it.</p>
+
+<section id="stolen-prompt" aria-labelledby="stolen-prompt-h">
+<h3 id="stolen-prompt-h">Prompt for iOS 27</h3>
+<p>Fill in the two boxes first, and the prompt updates. What you type stays on this page. Nothing is saved or sent.</p>
+<div class="fields">
+  <label for="p1-name">Trusted person's name, as it is in your Contacts</label>
+  <input id="p1-name" type="text" autocomplete="off" autocapitalize="words" spellcheck="false" data-target="p1-name">
+  <label for="p1-word">Secret word</label>
+  <input id="p1-word" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" data-target="p1-word">
+</div>
+<p><button type="button" class="copy" data-copy="p1-text" data-status="p1-status">Copy the stolen iPhone prompt</button></p>
+<p class="status" id="p1-status" role="status" aria-live="polite"></p>
+<h4>The prompt</h4>
+<div class="prompt" id="p1-text">Create a shortcut named “Where Is My iPhone” with an automation that runs when I get a message from <span data-fill="p1-name">[trusted person’s name]</span> that contains the word “<span data-fill="p1-word">[secret word]</span>”.
+Set the automation to run immediately, without asking first and without a notification, and allow it to run when my iPhone is locked.
+The actions, in order:
+1. Get Current Location.
+2. Send Message: send the current location to <span data-fill="p1-name">[trusted person’s name]</span>, with Show When Run turned off, so it sends without anyone tapping Send.</div>
+</section>
+
 <section id="before" aria-labelledby="before-h">
-<h2 id="before-h">Before you start</h2>
+<h3 id="before-h">Before you start</h3>
 <ul>
   <li>Pick one person you trust completely, like a parent. They need to be in your Contacts.</li>
   <li>Pick a secret word. Make one up, so it never shows up in normal texts. Do not use the word “location”.</li>
@@ -47,10 +83,11 @@
 </section>
 
 <section id="steps" aria-labelledby="steps-h">
-<h2 id="steps-h">The 6 steps</h2>
+<h3 id="steps-h">Build it by hand: the 6 steps</h3>
+<p class="note">These steps were written before iOS 27. On iOS 27, automations live inside a shortcut: double-tap <strong>Add</strong> (the plus), then <strong>Edit</strong>, then <strong>Automation</strong>, and choose <strong>Message</strong>. Then add the actions from steps 4 and 5. The prompt above does all of this for you.</p>
 <ol class="steps" role="list">
   <li>
-    <h3>Start a new automation</h3>
+    <h4>Start a new automation</h4>
     <ol>
       <li>In Shortcuts, double-tap the <strong>Automation</strong> tab at the bottom.</li>
       <li>Double-tap <strong>New Automation</strong>. If you already have automations, it's the <strong>Add</strong> button (the plus) at the top right.</li>
@@ -58,14 +95,14 @@
     </ol>
   </li>
   <li>
-    <h3>Choose who and the secret word</h3>
+    <h4>Choose who and the secret word</h4>
     <ol>
       <li>Next to <strong>Sender</strong>, double-tap <strong>Choose</strong>. Type your trusted person's name, double-tap them, then double-tap <strong>Done</strong>.</li>
       <li>Next to <strong>Message Contains</strong>, double-tap <strong>Choose</strong>. Type your secret word, then double-tap <strong>Done</strong>.</li>
     </ol>
   </li>
   <li>
-    <h3>Make it run by itself</h3>
+    <h4>Make it run by itself</h4>
     <ol>
       <li>Double-tap <strong>Run Immediately</strong>. Not “Run After Confirmation”, which would wait for you to tap.</li>
       <li>If you hear <strong>Notify When Run</strong>, turn it off, so a thief doesn't see a pop-up.</li>
@@ -74,7 +111,7 @@
     </ol>
   </li>
   <li>
-    <h3>Add “Get Current Location”</h3>
+    <h4>Add “Get Current Location”</h4>
     <ol>
       <li>Find the search field. It's at the bottom of the screen, labeled something like <strong>Search for apps and actions</strong>. If you hear <strong>Add Action</strong> first, double-tap that.</li>
       <li>Type <strong>Get Current Location</strong>.</li>
@@ -82,7 +119,7 @@
     </ol>
   </li>
   <li>
-    <h3>Add “Send Message”</h3>
+    <h4>Add “Send Message”</h4>
     <ol>
       <li>Use the search field again. Type <strong>Send Message</strong>, then double-tap the result.</li>
       <li>The action reads like “Send Current Location to Recipients”. If it says <strong>Message</strong> instead of Current Location, double-tap <strong>Message</strong> and choose <strong>Current Location</strong>.</li>
@@ -92,7 +129,7 @@
     </ol>
   </li>
   <li>
-    <h3>Test it</h3>
+    <h4>Test it</h4>
     <ol>
       <li>Ask your trusted person to text you the secret word.</li>
       <li>Within a few seconds, they should get a text back from your phone with your location.</li>
@@ -103,7 +140,7 @@
 </section>
 
 <section id="words" aria-labelledby="words-h">
-<h2 id="words-h">Secret word ideas</h2>
+<h3 id="words-h">Secret word ideas</h3>
 <p>Made-up words work best, because nobody types them by accident. Pick one, or invent your own:</p>
 <ul class="words">
   <li>zorbleflap</li>
@@ -117,7 +154,7 @@
 </section>
 
 <section id="findmy" aria-labelledby="findmy-h">
-<h2 id="findmy-h">Also turn on Find My</h2>
+<h3 id="findmy-h">Also turn on Find My</h3>
 <p>This Shortcut adds to Find My. It doesn't replace it. Turn Find My on too:</p>
 <ol>
   <li>Open <strong>Settings</strong>.</li>
@@ -131,9 +168,9 @@
 </section>
 
 <section id="limits" aria-labelledby="limits-h">
-<h2 id="limits-h">Honest limits</h2>
+<h3 id="limits-h">Honest limits</h3>
 <ul>
-  <li><strong>Airplane Mode or powering off stops it.</strong> The phone needs signal to get the text and reply.</li>
+  <li><strong>Airplane Mode or powering off stops it.</strong> The phone needs signal to get the text and reply. The <a href="#airplane">Airplane Mode shortcut</a> below helps with that.</li>
   <li><strong>It's only as private as your word.</strong> Your trusted person can get your location any time they text it. Pick someone you fully trust, and a word that never comes up in normal texts.</li>
   <li><strong>Keep the word secret.</strong> Share it only privately with that one person.</li>
   <li><strong>Location may be rough indoors.</strong> It's usually close, but not always exact.</li>
@@ -142,7 +179,7 @@
 </section>
 
 <section id="extras" aria-labelledby="extras-h">
-<h2 id="extras-h">Extras (optional)</h2>
+<h3 id="extras-h">Extras (optional)</h3>
 <p>These add more, but they're fiddlier with VoiceOver. The 6 steps above already work on their own.</p>
 
 <details>
@@ -172,10 +209,128 @@
 <p>Heads up: iPhones often block the camera while locked, so photos may not send from a locked phone. The location text still works either way.</p>
 </details>
 </section>
+</section>
+
+<section id="airplane" class="shortcut" aria-labelledby="airplane-h">
+<h2 id="airplane-h">Shortcut 2: Stop thieves turning on Airplane Mode</h2>
+<p class="lead">Thieves often turn on Airplane Mode so Find My can't track the phone. With this, Airplane Mode asks for a code. Get it wrong, and your iPhone turns Airplane Mode back off, takes a selfie, texts it and its location to someone you trust, and locks itself.</p>
+<p>From Tech in Her Step: <a href="https://www.tiktok.com/@techinherstep/video/7697410415067712798">watch her TikTok</a>. One change from the video: we turn Airplane Mode back off before texting, because texts can't go out while it's on.</p>
+
+<section id="airplane-prompt" aria-labelledby="airplane-prompt-h">
+<h3 id="airplane-prompt-h">Prompt for iOS 27</h3>
+<p>Fill in the two boxes first, and the prompt updates. What you type stays on this page. Nothing is saved or sent.</p>
+<div class="fields">
+  <label for="p2-name">Trusted person's name, as it is in your Contacts</label>
+  <input id="p2-name" type="text" autocomplete="off" autocapitalize="words" spellcheck="false" data-target="p2-name">
+  <label for="p2-code">Your 4-digit code (not your iPhone passcode)</label>
+  <input id="p2-code" type="text" inputmode="numeric" autocomplete="off" spellcheck="false" maxlength="8" data-target="p2-code">
+</div>
+<p><button type="button" class="copy" data-copy="p2-text" data-status="p2-status">Copy the Airplane Mode prompt</button></p>
+<p class="status" id="p2-status" role="status" aria-live="polite"></p>
+<h4>The prompt</h4>
+<div class="prompt" id="p2-text">Create a shortcut named “Airplane Mode Lock” with an automation that runs when Airplane Mode is turned on.
+Set the automation to run immediately, without asking first, and allow it to run when my iPhone is locked.
+The actions, in order:
+1. Ask for Input, input type Number, with the prompt “Enter 4-digit code”.
+2. If the provided input is not <span data-fill="p2-code">[your 4-digit code]</span>, then do all of these, in this order: turn Airplane Mode off; Take Photo with the front camera, with Show Camera Preview turned off; Get Current Location; Send Message with the photo to <span data-fill="p2-name">[trusted person’s name]</span>; Send Message with the current location to <span data-fill="p2-name">[trusted person’s name]</span>; Lock Screen.
+3. Turn off Show When Run on both Send Message actions, so they send by themselves.
+4. If the code is right, do nothing else and leave Airplane Mode on.</div>
+</section>
+
+<section id="airplane-steps" aria-labelledby="airplane-steps-h">
+<h3 id="airplane-steps-h">Build it by hand</h3>
+<p>New actions always land at the bottom. Steps 6 to 11 must sit inside the If, above <strong>Otherwise</strong> or <strong>End If</strong>. Moving actions with VoiceOver is fiddly, which is why the prompt is easier.</p>
+<ol class="steps" role="list">
+  <li>
+    <h4>Start the shortcut</h4>
+    <ol>
+      <li>In Shortcuts, double-tap <strong>Add</strong> (the plus). If you get the describe box, double-tap <strong>Edit</strong> to build by hand.</li>
+      <li>Double-tap the name at the top and rename it <strong>Airplane Mode Lock</strong>.</li>
+    </ol>
+  </li>
+  <li>
+    <h4>Add the Airplane Mode trigger</h4>
+    <ol>
+      <li>In the search field, type <strong>Automation</strong> and double-tap it.</li>
+      <li>Choose <strong>Airplane Mode</strong>, set to <strong>Is Turned On</strong>, and choose <strong>Run Immediately</strong>.</li>
+    </ol>
+  </li>
+  <li>
+    <h4>Ask for the code</h4>
+    <ol>
+      <li>Search <strong>Ask for Input</strong> and add it.</li>
+      <li>Set the input type to <strong>Number</strong>, and the prompt to <strong>Enter 4-digit code</strong>.</li>
+    </ol>
+  </li>
+  <li>
+    <h4>Check the code</h4>
+    <ol>
+      <li>Search <strong>If</strong> and add it. It reads “If Provided Input”.</li>
+      <li>Change <strong>is</strong> to <strong>is not</strong>. Then double-tap the empty value and type your code.</li>
+    </ol>
+  </li>
+  <li>
+    <h4>Turn Airplane Mode back off</h4>
+    <ol><li>Search <strong>Set Airplane Mode</strong>, add it, and set it to <strong>Off</strong>. Move it inside the If.</li></ol>
+  </li>
+  <li>
+    <h4>Take a selfie</h4>
+    <ol><li>Search <strong>Take Photo</strong> and add it. Set the camera to <strong>Front</strong>. Double-tap <strong>Show More</strong> and turn off <strong>Show Camera Preview</strong>. Move it inside the If.</li></ol>
+  </li>
+  <li>
+    <h4>Get the location</h4>
+    <ol><li>Search <strong>Get Current Location</strong>, add it, and move it inside the If.</li></ol>
+  </li>
+  <li>
+    <h4>Text the photo</h4>
+    <ol><li>Search <strong>Send Message</strong> and add it. Set the message to <strong>Photo</strong> and the recipient to your trusted person. Under <strong>Show More</strong>, turn off <strong>Show When Run</strong>. Move it inside the If.</li></ol>
+  </li>
+  <li>
+    <h4>Text the location</h4>
+    <ol><li>Add another <strong>Send Message</strong>. Set the message to <strong>Current Location</strong>, the same person, and turn off <strong>Show When Run</strong>. Move it inside the If.</li></ol>
+  </li>
+  <li>
+    <h4>Lock the screen</h4>
+    <ol><li>Search <strong>Lock Screen</strong>, add it, and move it inside the If, last.</li></ol>
+  </li>
+  <li>
+    <h4>Let it run by itself</h4>
+    <ol><li>Double-tap the <strong>Info</strong> button (an i in a circle), then <strong>Privacy</strong>. Turn on everything there, like <strong>Allow Running When Locked</strong>, and choose <strong>Always Allow</strong> if asked.</li></ol>
+  </li>
+</ol>
+</section>
+
+<section id="airplane-test" aria-labelledby="airplane-test-h">
+<h3 id="airplane-test-h">Test it</h3>
+<ol>
+  <li>Tell your trusted person you're testing.</li>
+  <li>Turn on Airplane Mode in Control Center and type a wrong code.</li>
+  <li>Airplane Mode should turn off, your screen should lock, and they should get a selfie and your location.</li>
+  <li>Try again with the right code. Nothing should happen, and Airplane Mode stays on.</li>
+</ol>
+</section>
+
+<section id="airplane-limits" aria-labelledby="airplane-limits-h">
+<h3 id="airplane-limits-h">Honest limits</h3>
+<ul>
+  <li><strong>You'll get the code box too.</strong> Any time you turn on Airplane Mode, type your code.</li>
+  <li><strong>Closing the box may stop it.</strong> If someone dismisses the code box instead of typing, the shortcut can stop with Airplane Mode still on.</li>
+  <li><strong>Turning the phone off isn't blocked.</strong> Keep Find My on, with Find My network, as in Shortcut 1.</li>
+  <li><strong>Block Control Center on the Lock Screen.</strong> Go to Settings, then Face ID and Passcode, then under Allow Access When Locked, turn off Control Center. Then a thief can't reach Airplane Mode without unlocking.</li>
+  <li><strong>The selfie may not send from a locked phone.</strong> iPhones often block the camera while locked. The location text still works.</li>
+  <li><strong>Stolen phone?</strong> Don't chase anyone. Give the location to a parent or the police.</li>
+</ul>
+</section>
+</section>
+
+<section id="more" aria-labelledby="more-h">
+<h2 id="more-h">More coming</h2>
+<p>This is a growing collection. New shortcuts get their own section here.</p>
+</section>
 </main>
 <footer>
-  <p>Idea from <a href="https://www.tiktok.com/@all.by.allan/video/7702242061294062861">All By Allan</a>.</p>
-  <p>Co-written with Tab · <a href="https://2three1y.github.io/">Made by Chaotic Carter</a>. <a href="https://github.com/2three1y/stolenphoneshortcut">Source on GitHub</a> (MIT).</p>
+  <p>Ideas from <a href="https://www.tiktok.com/@all.by.allan/video/7702242061294062861">All By Allan</a> and <a href="https://www.tiktok.com/@techinherstep/video/7697410415067712798">Tech in Her Step</a>.</p>
+  <p>Co-written with Tab · <a href="https://2three1y.github.io/">Made by Chaotic Carter</a>. <a href="https://github.com/2three1y/iphoneshortcuts">Source on GitHub</a> (MIT).</p>
 </footer>
 </body>
 </html>
